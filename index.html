@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./dist/css/style.css">
+</head>
+
+<body>
+    <section id="header">
+        <div class="h-items">
+            <div class="navigation">
+                <!-- <div>Logo</div> -->
+                <div> <a href="#about-us"><button>About Us</button></a></div>
+                <div> <a href="#services"><button>Services</button></a></div>
+                <div> <a href="#portfolio"><button>Portfolio</button></a></div>
+                <div> <a href="#form"><button>Contact</button></a></div>
+            </div>
+            <div class="float-right">
+                <a href="#form"><button class="button-catch">Get a quote</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="hero">
+        <div class="row">
+            <div class="col">
+                <h1>BN Web Designer</h1>
+                <p class="muted">Maximize the potential of your business with a professional online presence through a
+                    personalized website for your establishment.</p>
+                <a href="#form"><button class="button-catch">I want a web page</button></a>
+            </div>
+            <div class="col-8">
+                <div class="d-flex flex-shrink-0 align-items-start">
+                    <img src="./dist/imgs/screens01.png" id="img1" class="box rellax d-block flex-shrink-0 mt-n5"
+                        width="486" height="1390" alt="Screens" data-rellax-speed="4" data-disable-parallax-down="md"
+                        style="transform: translate3d(0px, 0px, 0px);">
+                    <img src="./dist/imgs/screens02.png" id="img2" class="rellax d-block flex-shrink-0 mt-n5"
+                        width="486" height="1390" alt="Screens" data-rellax-speed="4" data-disable-parallax-down="md"
+                        style="transform: translate3d(0px, 0px, 0px);">
+                    <img src="./dist/imgs/screens03.png" id="img3" class="rellax d-block flex-shrink-0 mt-n5"
+                        width="486" height="1390" alt="Screens" data-rellax-speed="4" data-disable-parallax-down="md"
+                        style="transform: translate3d(0px, 0px, 0px);">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="about-us">
+        <div class="row">
+            <div class="col">
+                <img src="./dist/imgs/WhatsApp Image 2024-05-13 at 21.03.21 (1).jpeg">
+                <img src="./dist/imgs/personal.jpeg">
+                <div class="ball"></div>
+            </div>
+            <div class="col-6 text">
+                <div>
+                    <h2>About Us</h2>
+                    <p>We are Brazilian brothers with extensive expertise in web development and design. Specializing in
+                        freelance services, we cater to various businesses in the Waterford region, Ireland,
+                        revitalizing brand identities to expand their market presence. <br>
+                        Our services encompass crafting compelling landing pages and facilitating domain acquisition and
+                        website hosting. Additionally, we design business cards and flyers to enhance your professional
+                        image, while optimizing your visibility on Google Business.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="row">
+            <h2>Services</h2>
+            <div class="col">
+                <img src="./dist/imgs/undraw_responsive_re_e1nn.svg">
+                <h3>Lading Page</h3>
+            </div>
+            <div class="col">
+                <img src="./dist/imgs/undraw_make_it_rain_re_w9pc.svg">
+                <h3>Flyer and Leaflet</h3>
+            </div>
+            <div class="col">
+                <img src="./dist/imgs/undraw_server_down_s-4-lk.svg">
+                <h3>Hosting and Domain</h3>
+            </div>
+            <div class="col">
+                <img src="./dist/imgs/undraw_reviews_lp8w.svg">
+                <h3>Google Business Profile</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="row">
+            <div class="col">
+                <h2>Portfolio</h2>
+                <p>Discover some of our work!</p>
+            </div>
+        </div>
+
+        <div class="row examples">
+            <script>
+                examples = document.querySelector(".examples");
+                for (let i = 1; i <= 6; i++) {
+                    examples.innerHTML = examples.innerHTML +
+                        `
+                    <div class="col-3" onmouseenter="startScroll(this)" onmouseleave="stopScroll(this)">
+                        <img src="./dist/imgs/portfolio/ex${i}.png">
+                    </div>
+                    `
+                }
+            </script>
+        </div>
+    </section>
+
+    <section id="form">
+        <form id="myForm" data-form-email="biston.nunes@gmail.com">
+            <h2>Contact Us</h2>
+            <h4>Interested? Contact us for a quote:</h4>
+            <div class="form">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Name" aria-label="name"
+                                aria-describedby="basic-addon1" id="name">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="E-mail" aria-label="email"
+                                aria-describedby="basic-addon1" id="email">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Phone Number" aria-label="phone"
+                                aria-describedby="basic-addon1" id="phone">
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <textarea class="form-control" placeholder="Your Message" aria-label="With textarea"
+                            id="message"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-primary" id="submitButton">
+                            <!-- <i class="bi bi-send"></i> -->
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </section>
+    <!-- <div id="snackbar"></div> -->
+
+    <section id="footer">
+        <div>
+            Phone / WhatsApp : +353 083 846 1065 <br>
+            E-mail: biston.nunes@gmail.com
+        </div>
+    </section>
+
+</body>
+
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
+<script src="./dist/js/main.js"></script>
+<script src="./dist/js/form.js"></script>
+
+</html>

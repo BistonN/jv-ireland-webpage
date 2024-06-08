@@ -1,0 +1,346 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("../fonts/Manrope/Manrope-VariableFont_wght.ttf");
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* HEADER */
+
+#header {
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    padding: 1% 8%;
+    z-index: 10;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+#header .h-items {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+#header .h-items .navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+#header .h-items .navigation div,
+#header .h-items .navigation a,
+#header .h-items .navigation button {
+    height: 100%;
+    width: 100%;
+}
+
+#header .h-items .navigation button {
+    background: none;
+    border: none;
+}
+
+#header .h-items .navigation button:hover {
+    font-weight: 600;
+}
+
+#header .h-items .float-right {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 60%;
+    align-items: center;
+}
+
+#header .dropdown button {
+    color: white;
+    background-color: #1E2233;
+    border-radius: 100px;
+    font-weight: 100;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+/* HERO */
+
+#hero {
+    padding: 2% 8%;
+    color: white;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(98, 89, 169, 1) 0%, rgba(15, 17, 32, 1) 100%);
+    overflow: hidden;
+}
+
+#hero .row {
+    height: 100%;
+    align-items: center;
+}
+
+#hero .row .col-8 {
+    max-height: 100%;
+    z-index: 0;
+}
+
+#hero .row .col-8 img#img1,
+#hero .row .col-8 img#img3 {
+    margin-top: -80px;
+    transition: margin-top 0.1s ease;
+}
+
+#hero .row .col-8 img#img2 {
+    margin-top: 1px;
+    transition: margin-top 0.1s ease;
+}
+
+.muted {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+}
+
+.button-catch {
+    background-color: #6366F1;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border: none;
+    border-radius: 100px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button-catch:hover {
+    background-color: #595bcf;
+}
+
+/* ABOUT US */
+
+#about-us {
+    padding: 2% 8%;
+}
+
+#about-us .row .col {
+    position: relative;
+}
+
+#about-us .row .col-6 .text div {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+#about-us .row .col img {
+    position: absolute;
+    border-radius: 50%;
+    height: 250px;
+    border: 10px solid #2F2E41;
+    z-index: 1;
+}
+
+#about-us .row .col img:first-child {
+    left: 175px;
+    top: 50px;
+}
+
+#about-us .row .col .ball {
+    background-color: #3F3D56;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+}
+
+/* SERVICES */
+
+#services {
+    /* height: 70vh; */
+    z-index: 1;
+    background-color: white;
+    padding: 2% 8%;
+    display: flex;
+    align-items: center;
+}
+
+#services h2 {
+    color: #0b0f19;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#services .row .col {
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-right: 35px;
+    padding: 30px 30px 0 30px;
+    transition: margin-top 0.3s ease;
+}
+
+#services .row .col:hover {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+    margin-top: -10px;
+}
+
+#services .row .col:last-child {
+    margin-right: 0;
+}
+
+#services .row .col img {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#services .row .col h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #565973;
+    margin: 30px;
+}
+
+/* PORTFOLIO */
+
+#portfolio {
+    background-color: white;
+    padding: 2% 8%;
+    /* height: 200vh; */
+}
+
+#portfolio div.col {
+    text-align: center;
+}
+
+#portfolio div.col p {
+    font-size: 18px;
+}
+
+#portfolio .examples {
+    overflow: hidden;
+    width: 100%;
+}
+
+#portfolio .examples div {
+    height: 400px;
+    width: 18%;
+    overflow: hidden;
+    position: relative;
+    padding: 0px;
+    border: 1px solid rgb(222, 222, 222);
+    margin: 1%;
+    border-radius: 10px;
+}
+
+#portfolio .examples div img {
+    width: -webkit-fill-available;
+    transition: transform 3s linear;
+    cursor: crosshair;
+    position: absolute;
+}
+
+/* FORM */
+
+#form {
+    background: linear-gradient(#1692a533, #1692a533), url("../imgs/glenn-carstens-peters-P1qyEf1g0HU-unsplash.jpg") fixed center center;
+    background-size: cover;
+    position: relative;
+    min-height: 75vh;
+    z-index: 1;
+    padding: 2% 8%;
+    color: white;
+    text-align: center;
+    border-top: solid 2px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+#form h4 {
+    margin-bottom: 4%;
+}
+
+#form .form {
+    padding: 0 20%;
+}
+
+#form .form div {
+    padding-left: 0;
+}
+
+#form .form i.bi-envelope {
+    color: #9fa2a6;
+    font-size: 25px;
+}
+
+#form .form input::placeholder,
+#form .form textarea::placeholder {
+    color: #494b4e;
+}
+
+#form .form textarea,
+#form .form input {
+    margin-bottom: 12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: none;
+}
+
+#form .form button {
+    background-color: #6366F1;
+    color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #6365f1;
+    min-width: 20%;
+    float: right;
+}
+
+/* FOOTER  */
+
+#footer {
+    height: 15vh;
+    background-color: #6366F1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 992px) {
+    #hero .col-8 {
+        display: none;
+    }
+
+    #about-us .col-6 {
+        width: 100%;
+    }
+    #about-us .col {
+        display: none;
+    }
+
+    #services .row .col {
+        flex: none;
+    }
+
+    #services .row {
+        padding: 30px
+    }
+
+    #portfolio .examples div  {
+        width: 100%;
+    }
+}
